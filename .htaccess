@@ -1,0 +1,20 @@
+RewriteEngine On
+
+
+RewriteRule ^tiles/([0-9]+)/([0-9]+)/([0-9]+).png$ tiles.php?z=$1&x=$2&y=$3 [L]
+RewriteRule ^tiles/hot/([0-9]+)/([0-9]+)/([0-9]+).png$ tiles.php/?z=$1&x=$2&y=$3&r=hot [L]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                        "access plus 1 month"
+  # CSS
+    ExpiresByType text/css                "access plus 1 year"
+  # JavaScript
+    ExpiresByType application/javascript  "access plus 1 year"
+</IfModule>
+
+# Bloquer une ou plusieurs adresse IP
+Order Allow,Deny
+Allow from all
+Deny from 82.123.96.12
+

@@ -1,0 +1,33 @@
+		<h1 class="widget-title">Nombre de Vélib</h1>
+		<TABLE class="table-compact">
+		<TR>
+		<TH>Nbr de velov en station</TH>
+		<TH>Nbr de velov Elec. en station</TH>
+		</TR>	
+		<TR><TD>2076 ( + Park+: 0)<br> ( Max: 2264)</TD><TD>0 ( + Park+: 0)<br> ( Max: 0)</TD></TR>		</TABLE>
+		<br>
+
+		<TABLE class="table-compact">
+		<TR>
+		<TH>Nombre estimé de velov disponibles en station</TH>
+		</TR>	
+		<TR>
+						<TD>
+							Estimation sur 3J: 1483 ( + Park+: 0)<br>
+							Estimation sur 2J: 1483 ( + Park+: 0)
+						</TD></TR>		
+		</TABLE>
+		<p class="notes">* les velov en cours d'utilisation ne sont pas comptés</p>		
+		<p class="notes">* le nombre estimé de velov en station est obtenu en soustrayant le nombre min de velov enregistré par chaque station sur les 2 / 3 derniers jours</p>	
+		<br>		
+		<TABLE class="table-compact" >
+		<TR>
+		<TH>Nombre estimé de velov en cours d'utilisation</TH>
+		</TR>	
+		<TR>
+						<TD>
+							velov loués: 19  -  VAE loués: 0
+						</TD></TR>		
+		</TABLE>		
+				
+		
