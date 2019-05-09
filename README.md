@@ -1,15 +1,17 @@
-# Velib2018 Tools
-Code source du site velib.philibert.info: analyse et interprétation des données du site Velib Métropole www.velib-metropole.fr/map#/
+# Velov2018 Tools
+Code source du site velov.philibert.info: analyse et interprétation des données du site Velov proposée par la métropole de Lyon
+Plus qu'autre chose, l'objectif est de voir ce que donne les algos et methodes retenues sur Velib 2018 appliquées à un système de VLS qui fonctionne globalement bien.
+
 
 
 ## Installation: 
-	--> créer  la base de donnée MySQL à l'aide du script sql suivant: ./setup/CreateVelibToolDatabase.sql 
+	--> créer  la base de donnée MySQL à l'aide du script sql suivant: ./setup/CreatevelovToolDatabase.sql 
  	--> Renseigner le paramétrage Mysql dans ./inc/config.inc.php ($server, $user, $password, $db)
  	--> Remplacer "API-Key" par une clé d'api google map valide dans ./cron/stationLocationHasMoved.php
 	--> Remplacer l'identifiant google analystics ou supprimer le js des pages
  	--> Adapter le .htaccess si le site n'est pas en https (NB: https requis pour la géolocalisation  sur la carte)
 	--> les scripts du dossier cron sont prévu être appelés périodiquement 
-		- velibAPIParser.php : collecte des données depuis Velib-metropole
+		- velovAPIParser.php : collecte des données depuis velov-metropole
 		- stationLocationHasMoved.php: reverse geocoding: mise à jour des adresses des stations dont les coordonnées ont changé
 		- mysqlBackup.php: sauvegarde mysql
  	--> renommer le fichier no.maintenance en .maintenance active les bandeaux de maintenance
