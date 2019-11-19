@@ -543,7 +543,8 @@
 		if($sort!="")
 			$query= $query." ".$sort;
 		
-		return $mysqliResult = mysqli_query($link, $query);		
+		mysqli_query($link,"SET SQL_BIG_SELECTS=1");
+		return $mysqliResult = mysqli_query($link, $query);	
 	}
 
 

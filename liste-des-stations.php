@@ -5,8 +5,7 @@
 	
 	if( isCacheValid('liste-des-stations.php') and isCacheValid('lastUpdateText') )
 	{
-		$cacheValide = true;
-		
+		$cacheValide = True;
 	}
 	else
 	{
@@ -42,7 +41,7 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">	
 	
-	<link rel="stylesheet" media="all" href="./css/joujouVelov.css?<?php echo filemtime('./css/joujouVelov.css');?>">
+	<link rel="stylesheet" media="all" href="./css/joujouvelov.css?<?php echo filemtime('./css/joujouvelov.css');?>">
 	<script src="./inc/sorttable.js"></script>
   </head>
   <body>

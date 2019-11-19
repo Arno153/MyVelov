@@ -160,6 +160,7 @@
 		{
 
 			//echo $query;
+			mysqli_query($link,"SET SQL_BIG_SELECTS=1");
 			if ($result = mysqli_query($link, $query)) 
 			{
 				if (mysqli_num_rows($result)>0)
