@@ -8,7 +8,7 @@
 include "./../inc/cacheMgt.inc.php";
 include "./../inc/mysql.inc.php";
 
-$debug = true;
+$debug = false;
 $debugVerbose = false;
 $debugvelovRawData= false;
 $velovExit = 0;
@@ -226,10 +226,13 @@ foreach($velovDataArray as $keyL0 => $valueL0)
 			$stationNbEDock=0;
 			$stationNbDock=0;
 			foreach($valueL1 as $keyL2 => $valueL2){
+				$stationNbBike=0;
 				if($keyL2 == "available_bikes"){ $stationNbBike  = $valueL2;} //
 				$stationNbEBike  = 0; 
+				$stationNbFreeDock=0;
 				if($keyL2 == "available_bike_stands"){ $stationNbFreeDock   = $valueL2;} 
 				$stationNbFreeEDock   = 0;
+				$stationNbDock = 0;
 				if($keyL2 == "bike_stands"){ $stationNbDock   = $valueL2;} //
 				$stationNbEDock   = 0;	
 				$stationNbBikeOverflow  = 0;

@@ -144,7 +144,7 @@
 				ob_start();			
 				// debut mise en cache	
 		?>
-		<h1 class="widget-title">Nombre de Vélib</h1>
+		<h1 class="widget-title">Nombre de velov</h1>
 		<TABLE class="table-compact">
 		<TR>
 		<TH>Nbr de velov en station</TH>
