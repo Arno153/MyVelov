@@ -887,39 +887,37 @@ foreach($velovDataArray as $keyL0 => $valueL0)
 						}
 						else
 						{
-						printf ("New Record has id %d.\n", mysqli_insert_id($link));
-						}
-						
+						printf ("New Record has id %d.\n", mysqli_insert_id($link));						
 
-						$r = 
-							"
-								INSERT INTO `velov_station_status`
-								(
-									`id`,
-									`stationCode`,
-									`stationState`,
-									`stationStatusDate`
-								)
-								VALUES
-								(
-									LAST_INSERT_ID(),
-									'$stationCode' ,
-									'$stationState' ,
-									now()			
-								)
-							";		
-								
-						if(!mysqli_query($link, $r))
-						{		
-							echo "<br>CreateStatusRow error";
-							printf("Errormessage: %s\n", mysqli_error($link));
-							if($debugVerbose) echo $r;
-						}	
-						else
-						{
-							if($debugVerbose) echo "<br> CreateStatusRow ok";
+							$r = 
+								"
+									INSERT INTO `velov_station_status`
+									(
+										`id`,
+										`stationCode`,
+										`stationState`,
+										`stationStatusDate`
+									)
+									VALUES
+									(
+										LAST_INSERT_ID(),
+										'$stationCode' ,
+										'$stationState' ,
+										now()			
+									)
+								";		
+									
+							if(!mysqli_query($link, $r))
+							{		
+								echo "<br>CreateStatusRow error";
+								printf("Errormessage: %s\n", mysqli_error($link));
+								if($debugVerbose) echo $r;
+							}	
+							else
+							{
+								if($debugVerbose) echo "<br> CreateStatusRow ok";
+							}
 						}
-						
 					
 						
 						// 2 : génération du log
